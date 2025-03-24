@@ -1,0 +1,35 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "BankServerApp",
+            "request": "launch",
+            "mainClass": "bank.restserver/bank.restserver.BankServerApp",
+            "projectName": "modules-restserver"
+        },
+        {
+            "type": "java",
+            "name": "JSONHandler",
+            "request": "launch",
+            "mainClass": "bank.persistence/bank.persistence.JSONHandler",
+            "projectName": "modules-persistence"
+        },
+        {
+            "type": "java",
+            "name": "BankApp",
+            "request": "launch",
+            "mainClass": "bank.ui/bank.ui.BankApp",
+            "projectName": "modules-ui"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        }
+    ]
+}

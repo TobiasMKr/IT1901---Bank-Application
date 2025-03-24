@@ -1,0 +1,3 @@
+# Documentation for release 2
+
+In release 2, our primary focus was to continue to develop our module structure. We now extended the structure with a persistence module containing our JSONHandler and our JSON-file. We also added a new scene to the application to show a list of transactions, read from the JSON-file. In this release, we extended out test to also include the ui module and the persistance module. 

@@ -1,0 +1,37 @@
+@startuml bank
+title "Bank project structure" 
+
+[Core Module] -down-> [Ui Module] : Depends
+[Core Module] -down-> [Persistence Module] : Depends
+[Persistence Module] -down-> [Ui Module] : Depends
+
+
+package Bank.core {
+    card "Class Deposit"
+    card "Class Bank"  
+    card "Class Transaction"
+    card "Class Withdrawal" 
+}
+
+package Bank.persistence {
+    card "Class JSONHandler"
+    file "balance.json file"  
+}
+
+package Bank.ui {
+    card "Class BankController"
+    card "Class TransactionsController"
+    card "Class BankApp"
+    card "Class Bank.fxml"
+    card "Class Transactions.fxml"
+}
+
+
+[Ui Module] -right- Bank.ui
+[Persistence Module] -right- Bank.persistence
+[Core Module] -right- Bank.core
+
+
+
+
+@enduml

@@ -1,0 +1,49 @@
+@startuml bank
+title "Bank project structure" 
+
+[Ui Module] -up-> [Core Module] : Depends
+[Persistence Module] -up-> [Core Module] : Depends
+[Ui Module] -up-> [Persistence Module] : Depends
+[Restserver Module] -down-> [Core Module] : Depends
+[Restserver Module] -up-> [Persistence Module] : Depends
+[React] -up-> [Restserver Module] : Depends
+[Ui Module] -up-> [Restserver Module] : Depends
+
+package Bank.core {
+    card "Class Deposit"
+    card "Class Bank"  
+    card "Class Transaction"
+    card "Class Withdrawal" 
+}
+
+package Bank.persistence {
+    card "Class JSONHandler"
+}
+
+package Bank.ui {
+    card "Class BankController"
+    card "Class TransactionsController"
+    card "Class BankApp"
+    card "Class RemoteBankApp"
+    card "Class BankAccess"
+    card "Class LocalBankAccess"
+    card "Class RemoteBankAccess"
+}
+
+package Bank.restserver {
+    card "Class BankController"
+    card "Class BankServerApp"
+    card "Class BankService"
+
+}
+
+
+[Ui Module] -right- Bank.ui
+[Persistence Module] -right- Bank.persistence
+[Core Module] -right- Bank.core
+[Restserver Module] -left- Bank.restserver
+
+
+
+
+@enduml
